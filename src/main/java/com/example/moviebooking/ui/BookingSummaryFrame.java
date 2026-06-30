@@ -63,7 +63,7 @@ public class BookingSummaryFrame extends JFrame {
             sb.append("Customer Name: ").append(booking.getCustomerName()).append('\n');
             sb.append("Movie: ").append(movie != null ? movie.getMovieName() : "[unknown]").append('\n');
             sb.append("Tickets: ").append(booking.getTickets()).append('\n');
-            sb.append("Total Amount: $").append(String.format("%.2f", booking.getTotalAmount())).append('\n');
+            sb.append("Total Amount: Rs. ").append(String.format("%.2f", booking.getTotalAmount())).append('\n');
             sb.append("Booking Date: ").append(booking.getBookingDate()).append('\n');
             txtResult.setText(sb.toString());
         } catch (SQLException ex) {

@@ -64,7 +64,7 @@ public class BookTicketFrame extends JFrame {
         gbc.gridx = 0; gbc.gridy = 3;
         add(new JLabel("Total Amount:"), gbc);
         gbc.gridx = 1;
-        lblTotal = new JLabel("$0.00");
+        lblTotal = new JLabel("Rs. 0.00");
         add(lblTotal, gbc);
 
         // Book button
@@ -98,7 +98,7 @@ public class BookTicketFrame extends JFrame {
     private void updateTotal() {
         Movie selected = (Movie) cmbMovies.getSelectedItem();
         if (selected == null) {
-            lblTotal.setText("$0.00");
+            lblTotal.setText("Rs. 0.00");
             return;
         }
         int tickets = 0;
@@ -106,7 +106,7 @@ public class BookTicketFrame extends JFrame {
             tickets = Integer.parseInt(txtTickets.getText().trim());
         } catch (NumberFormatException ignored) {}
         double total = tickets * selected.getPrice();
-        lblTotal.setText(String.format("$%.2f", total));
+        lblTotal.setText(String.format("Rs. %.2f", total));
     }
 
     private void performBooking() {

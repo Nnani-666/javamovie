@@ -43,7 +43,7 @@ public class ViewMoviesFrame extends JFrame {
                         m.getMovieId(),
                         m.getMovieName(),
                         m.getGenre(),
-                        String.format("$%.2f", m.getPrice()),
+                        String.format("Rs. %.2f", m.getPrice()),
                         m.getAvailableSeats()
                 };
                 tableModel.addRow(row);

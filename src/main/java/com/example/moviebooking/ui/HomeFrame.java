@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class HomeFrame extends JFrame {
     public HomeFrame() {
-        setTitle("Movie Ticket Booking System");
+        setTitle("Movie Ticket Booking App");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

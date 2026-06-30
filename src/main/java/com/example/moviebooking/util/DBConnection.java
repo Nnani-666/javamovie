@@ -53,11 +53,11 @@ public class DBConnection {
             try (java.sql.ResultSet rs = stmt.executeQuery(countMoviesSql)) {
                 if (rs.next() && rs.getInt(1) == 0) {
                     stmt.execute("INSERT INTO movies (movie_name, genre, price, available_seats) VALUES " +
-                            "('Inception', 'Sci-Fi', 150.00, 100), " +
-                            "('The Godfather', 'Crime', 120.00, 80), " +
-                            "('Spirited Away', 'Animation', 100.00, 120), " +
-                            "('Parasite', 'Thriller', 130.00, 90), " +
-                            "('Interstellar', 'Sci-Fi', 140.00, 70)");
+                            "('Interstellar', 'Sci-Fi', 250.00, 100), " +
+                            "('Avatar', 'Sci-Fi', 200.00, 80), " +
+                            "('The Matrix', 'Sci-Fi', 150.00, 120), " +
+                            "('Inception', 'Sci-Fi', 180.00, 90), " +
+                            "('Kalki 2898 AD', 'Sci-Fi', 300.00, 70)");
                 }
             }
         }
