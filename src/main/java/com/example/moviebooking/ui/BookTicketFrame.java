@@ -41,6 +41,15 @@ public class BookTicketFrame extends JFrame {
         add(new JLabel("Customer Name:"), gbc);
         gbc.gridx = 1;
         txtCustomerName = new JTextField();
+        // Only allow alphabets and spaces in the customer name field
+        txtCustomerName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isLetter(c) && c != ' ' && c != java.awt.event.KeyEvent.VK_BACK_SPACE) {
+                    e.consume();
+                }
+            }
+        });
         add(txtCustomerName, gbc);
 
         // Movie selection
