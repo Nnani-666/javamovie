@@ -2,6 +2,11 @@ package com.example.moviebooking.model;
 
 import java.time.LocalDateTime;
 
+/**
+ * Booking Model Class.
+ * Demonstrates Encapsulation by hiding internal state (private fields)
+ * and requiring all interaction to be performed through an object's public methods (getters/setters).
+ */
 public class Booking {
     private int bookingId;
     private String customerName;

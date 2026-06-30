@@ -6,5 +6,6 @@
 ./src/main/java/com/example/moviebooking/util/DBConnection.java
 ./src/main/java/com/example/moviebooking/dao/BookingDAO.java
 ./src/main/java/com/example/moviebooking/dao/MovieDAO.java
+./src/main/java/com/example/moviebooking/dao/IMovieDAO.java
 ./src/main/java/com/example/moviebooking/model/Booking.java
 ./src/main/java/com/example/moviebooking/model/Movie.java

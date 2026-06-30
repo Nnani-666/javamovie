@@ -5,6 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * DBConnection is a Utility class.
+ * Demonstrates the Singleton Design Pattern to ensure only one database connection exists.
+ */
 public class DBConnection {
     private static final String URL = "jdbc:sqlite:movie_booking.db";
     private static Connection connection;

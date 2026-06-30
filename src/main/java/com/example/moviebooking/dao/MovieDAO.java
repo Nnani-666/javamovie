@@ -10,8 +10,18 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieDAO {
+/**
+ * MovieDAO handles all database operations related to Movies.
+ * Implements IMovieDAO to demonstrate Abstraction.
+ */
+public class MovieDAO implements IMovieDAO {
 
+    /**
+     * Retrieves a list of all available movies from the database.
+     * @return A list of Movie objects.
+     * @throws SQLException If a database access error occurs.
+     */
+    @Override
     public List<Movie> getAllMovies() throws SQLException {
         String sql = "SELECT movie_id, movie_name, genre, price, available_seats FROM movies";
         List<Movie> movies = new ArrayList<>();
@@ -31,6 +41,13 @@ public class MovieDAO {
         return movies;
     }
 
+    /**
+     * Retrieves a specific movie by its ID.
+     * @param movieId The unique identifier of the movie.
+     * @return The Movie object if found, otherwise null.
+     * @throws SQLException If a database access error occurs.
+     */
+    @Override
     public Movie getMovieById(int movieId) throws SQLException {
         String sql = "SELECT movie_id, movie_name, genre, price, available_seats FROM movies WHERE movie_id = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -51,6 +68,13 @@ public class MovieDAO {
         return null;
     }
 
+    /**
+     * Updates the available seats for a given movie.
+     * @param movieId The unique identifier of the movie.
+     * @param newAvailableSeats The new seat count to be updated.
+     * @throws SQLException If a database access error occurs.
+     */
+    @Override
     public void updateAvailableSeats(int movieId, int newAvailableSeats) throws SQLException {
         String sql = "UPDATE movies SET available_seats = ? WHERE movie_id = ?";
         try (Connection conn = DBConnection.getConnection();

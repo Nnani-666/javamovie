@@ -48,9 +48,6 @@ public class BookTicketFrame extends JFrame {
         add(new JLabel("Movie:"), gbc);
         gbc.gridx = 1;
         cmbMovies = new JComboBox<>();
-        cmbMovies.setRenderer((list, value, index, isSelected, cellHasFocus) -> {
-            return new JLabel(value != null ? value.getMovieName() + " (" + value.getAvailableSeats() + " seats)" : "");
-        });
         add(cmbMovies, gbc);
 
         // Tickets

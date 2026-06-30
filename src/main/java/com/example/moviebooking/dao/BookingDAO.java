@@ -10,6 +10,10 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * BookingDAO handles all database operations related to Bookings.
+ * This class isolates data access logic from the presentation layer (UI).
+ */
 public class BookingDAO {
 
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

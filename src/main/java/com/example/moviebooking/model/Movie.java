@@ -31,4 +31,14 @@ public class Movie {
 
     public int getAvailableSeats() { return availableSeats; }
     public void setAvailableSeats(int availableSeats) { this.availableSeats = availableSeats; }
+
+    /**
+     * Overridden toString method.
+     * Demonstrates Polymorphism by overriding Object's toString method.
+     * Useful for displaying the object directly in UI components like JComboBox.
+     */
+    @Override
+    public String toString() {
+        return movieName + " (" + availableSeats + " seats)";
+    }
 }
