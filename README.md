@@ -2,7 +2,7 @@
 
 A clean, modular Java-based desktop application for booking movie tickets, built with a sci-fi theme.
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - **Java (JDK 17)**: The core programming language used to build the logic.
 - **Java Swing**: Used to create the Graphical User Interface (GUI) of the application (buttons, tables, forms, etc.).
@@ -10,7 +10,7 @@ A clean, modular Java-based desktop application for booking movie tickets, built
 - **JDBC (Java Database Connectivity)**: Used to connect the Java application with the SQLite database, execute SQL queries, and manage transactions.
 - **Bash Scripting**: Custom scripts (`compile.sh` and `run.sh`) automate downloading dependencies (SQLite driver), compiling the code, and running the application seamlessly without needing an IDE like IntelliJ or Eclipse.
 
-## 🏗 Application Architecture
+## Application Architecture
 
 The project follows Object-Oriented Programming (OOP) principles and utilizes the **Data Access Object (DAO)** design pattern to separate concerns:
 
@@ -27,14 +27,14 @@ The project follows Object-Oriented Programming (OOP) principles and utilizes th
    - `HomeFrame`, `ViewMoviesFrame`, `BookTicketFrame`, etc.
    - Contains the Java Swing `JFrame` classes that build the visual screens the user interacts with.
 
-## ✨ Features
+## Features
 
 - **View Movies**: Browse a list of available sci-fi movies, their genres, prices (in Rs.), and available seat counts.
 - **Book Ticket**: Select a movie from a dropdown, enter a customer name and the number of tickets. The app dynamically calculates the total cost. It validates seat availability, saves the booking to the database, and deducts the booked seats from the movie.
 - **Cancel Booking**: Enter a booking ID to completely cancel a reservation. The app automatically restores the available seats for that specific movie.
 - **Booking Summary**: Look up detailed information about a past booking using a booking ID.
 
-## 🚀 How to Run
+## How to Run
 
 This project is completely "zero-setup". You do not need to install a database server (like MySQL) or manually configure an IDE.
 
