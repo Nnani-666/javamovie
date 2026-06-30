@@ -34,6 +34,13 @@ public class CancelBookingFrame extends JFrame {
         add(new JLabel("Booking ID:"), gbc);
         gbc.gridx = 1;
         txtBookingId = new JTextField();
+        txtBookingId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                if (!Character.isDigit(e.getKeyChar()) && e.getKeyChar() != java.awt.event.KeyEvent.VK_BACK_SPACE) {
+                    e.consume();
+                }
+            }
+        });
         add(txtBookingId, gbc);
 
         gbc.gridx = 0; gbc.gridy = 1; gbc.gridwidth = 2;

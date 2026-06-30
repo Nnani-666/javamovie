@@ -74,6 +74,11 @@ public class BookTicketFrame extends JFrame {
 
         // Listeners
         txtTickets.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                if (!Character.isDigit(e.getKeyChar()) && e.getKeyChar() != java.awt.event.KeyEvent.VK_BACK_SPACE) {
+                    e.consume();
+                }
+            }
             public void keyReleased(java.awt.event.KeyEvent e) {
                 updateTotal();
             }

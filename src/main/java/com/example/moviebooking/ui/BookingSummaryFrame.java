@@ -30,6 +30,13 @@ public class BookingSummaryFrame extends JFrame {
         JPanel topPanel = new JPanel(new FlowLayout());
         topPanel.add(new JLabel("Booking ID:"));
         txtBookingId = new JTextField(10);
+        txtBookingId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                if (!Character.isDigit(e.getKeyChar()) && e.getKeyChar() != java.awt.event.KeyEvent.VK_BACK_SPACE) {
+                    e.consume();
+                }
+            }
+        });
         topPanel.add(txtBookingId);
         btnSearch = new JButton("Search");
         topPanel.add(btnSearch);
